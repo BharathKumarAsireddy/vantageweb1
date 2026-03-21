@@ -35,6 +35,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Large video/media files (too large for GitHub - serve locally or via CDN)
-*.mov
-*.mp4
+# Video files are tracked via Git LFS (see .gitattributes)
