@@ -1,20 +1,18 @@
 "use client";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Database, RefreshCw, Plug, GraduationCap, BarChart3, Settings, ArrowRight, Mic } from "lucide-react";
+import { Database, Film, TrendingUp, Palette, Globe, Mic, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { FloatingPaths } from "@/components/ui/background-paths";
 
 const services = [
-  { icon: Database, title: "CRM Implementation", slug: "crm-implementation", description: "End-to-end CRM setup and configuration tailored to your business workflows, ensuring a smooth launch from day one.", accent: "#C9A84C" },
-  { icon: RefreshCw, title: "CRM Data Migration", slug: "crm-data-migration", description: "Secure, accurate migration of your existing data into your CRM with full validation, deduplication, and integrity checks.", accent: "#1A6B3C" },
-  { icon: Plug, title: "CRM Integration & Automation", slug: "crm-integration", description: "Connect your CRM with third-party tools — ERP, email, marketing platforms — and automate repetitive tasks to boost efficiency.", accent: "#C9A84C" },
-  { icon: GraduationCap, title: "CRM Training & Support", slug: "crm-training", description: "Hands-on training programs and ongoing support to empower your team to get the most out of your CRM investment.", accent: "#1A6B3C" },
-  { icon: BarChart3, title: "CRM Analytics & Reporting", slug: "crm-analytics", description: "Custom dashboards and reports that surface real-time insights from your CRM data to drive smarter business decisions.", accent: "#C9A84C" },
-  { icon: Settings, title: "CRM Customization", slug: "crm-customization", description: "Tailor your CRM with custom fields, modules, workflows, and UI adjustments to perfectly fit your unique business processes.", accent: "#1A6B3C" },
-  { icon: RefreshCw, title: "CRM Maintenance", slug: "crm-maintenance", description: "Ongoing monitoring, health checks, performance tuning, and proactive fixes to keep your CRM running at peak efficiency 24/7.", accent: "#C9A84C" },
-  { icon: Mic, title: "Podcast Studio", slug: "podcasting", description: "A fully equipped, acoustically treated podcast studio available for rent — professional lighting, velvet lounge seating, and broadcast-quality infrastructure for creators and brands.", accent: "#8B5CF6" },
+  { icon: Database,    title: "CRM Implementation",  slug: "crm-implementation",  description: "End-to-end CRM setup covering automation, data migration, training, maintenance, analytics, and customisation — everything your team needs under one roof.", accent: "#C9A84C" },
+  { icon: TrendingUp,  title: "Media Strategy",      slug: "media-strategy",      description: "Data-driven media planning across traditional and digital channels, built to maximise reach, engagement, and ROI for your brand.", accent: "#1A6B3C" },
+  { icon: Film,        title: "Media Production",    slug: "media-production",    description: "Premium video, audio, and content production that captivates audiences and communicates your brand story with cinematic impact.", accent: "#C9A84C" },
+  { icon: Palette,     title: "Creative Consulting", slug: "creative-consulting", description: "Innovative creative direction and brand identity development that sets you apart and resonates deeply with your target market.", accent: "#1A6B3C" },
+  { icon: Globe,       title: "Digital Marketing",   slug: "digital-marketing",   description: "Omnichannel digital campaigns — SEO, paid media, social, and content — that connect with your audience and convert at every stage.", accent: "#C9A84C" },
+  { icon: Mic,         title: "Podcast Studio",      slug: "podcasting",          description: "A fully equipped, acoustically treated podcast studio available for rent — professional lighting, velvet lounge seating, and broadcast-quality infrastructure.", accent: "#8B5CF6" },
 ];
 
 const containerVariants = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
@@ -66,8 +64,7 @@ export default function Services() {
             </span>
           </h2>
           <p className="max-w-2xl mx-auto text-lg" style={{ color: "#9ca3af" }}>
-            Comprehensive CRM maintenance solutions designed to keep your systems
-            running efficiently and your teams performing at their best.
+            From CRM implementation and media strategy to creative production, digital marketing, and a professional podcast studio — we cover everything your brand needs to grow.
           </p>
         </motion.div>
 
@@ -88,8 +85,6 @@ export default function Services() {
               >
                 <Link
                   href={`/services/${svc.slug}`}
-                  target={svc.slug === "brand-analytics" || svc.slug === "media-production" ? "_blank" : undefined}
-                  rel={svc.slug === "brand-analytics" || svc.slug === "media-production" ? "noopener noreferrer" : undefined}
                   className="block h-full group"
                 >
                   <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3 transition-transform duration-300 group-hover:scale-[1.02]"

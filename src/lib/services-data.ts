@@ -45,6 +45,122 @@ const pv = (id: number, fps = 30) =>
 
 export const servicesData: ServiceData[] = [
   {
+    slug: "crm-implementation",
+    title: "CRM Implementation",
+    tagline: "Configure. Automate. Scale.",
+    heroDescription:
+      "We deliver end-to-end CRM implementation — from initial setup and data migration to automation, training, analytics, and ongoing maintenance — so your team can focus on relationships, not admin.",
+    accent: "#C9A84C",
+    accentSecondary: "#e8d070",
+    heroVideo: pv(3195394),
+    sections: [
+      {
+        type: "overview",
+        title: "One CRM Partner. Every Solution You Need.",
+        subtitle: "Built Around Your Business. Ready from Day One.",
+        description:
+          "A CRM is only as powerful as the team and processes behind it. Our implementation service goes far beyond software setup — we design, configure, migrate, automate, and train so your CRM becomes the engine that drives your entire customer lifecycle.\n\nFrom choosing the right platform to building custom workflows and keeping everything running at peak performance, we handle every dimension of your CRM journey. One partner. Complete ownership. Measurable results.",
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80",
+        videoUrl: pv(3044943),
+      },
+      {
+        type: "features",
+        title: "Everything Covered Under One Roof",
+        subtitle: "Our CRM Services",
+        description:
+          "Six specialist disciplines, seamlessly delivered as one integrated engagement — so nothing falls through the cracks.",
+        videoUrl: pv(2795405),
+        features: [
+          {
+            title: "CRM Integration & Automation",
+            description:
+              "Connect your CRM to your entire tech stack — ERP, email platforms, marketing tools, and more — and automate repetitive tasks so your team reclaims hours every week. We design smart workflows that trigger the right actions at exactly the right time.",
+            image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80",
+          },
+          {
+            title: "CRM Data Migration",
+            description:
+              "Move your data with confidence. We handle full-cycle migration from legacy systems or spreadsheets — including cleansing, deduplication, field mapping, and post-migration validation — so not a single record is lost or corrupted.",
+            image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80",
+          },
+          {
+            title: "CRM Training & Support",
+            description:
+              "Adoption is everything. Our hands-on training programmes are tailored to each role in your business — from sales reps to managers — ensuring your team uses the CRM to its full potential from day one and beyond.",
+            image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80",
+          },
+          {
+            title: "CRM Maintenance",
+            description:
+              "Your CRM needs continuous care to stay healthy. We provide proactive monitoring, regular health checks, performance tuning, and fast-response issue resolution — keeping your system stable and your team unblocked 24/7.",
+            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
+          },
+          {
+            title: "CRM Analytics & Reporting",
+            description:
+              "Turn your CRM data into a strategic asset. We build custom dashboards and automated reports that surface pipeline health, team performance, and customer behaviour insights — giving leadership the clarity to make faster, smarter decisions.",
+            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
+          },
+          {
+            title: "CRM Customisation",
+            description:
+              "No two businesses are the same. We tailor your CRM with custom fields, modules, views, scoring models, and UI adjustments that perfectly mirror your sales process and make the system feel native to the way your team already works.",
+            image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80",
+          },
+        ],
+      },
+      {
+        type: "process",
+        title: "Our Implementation Process",
+        subtitle: "A Proven Path to CRM Success",
+        description:
+          "We follow a structured four-phase methodology that de-risks your implementation and ensures every milestone is delivered on time and to spec.",
+        videoUrl: pv(3209828, 25),
+        processSteps: [
+          {
+            step: "01",
+            title: "Discovery & Planning",
+            description:
+              "We audit your current systems, map your processes, define requirements, and build a detailed implementation roadmap aligned to your business goals.",
+          },
+          {
+            step: "02",
+            title: "Configuration & Migration",
+            description:
+              "We configure the CRM to your exact specifications, build automation workflows, and migrate your data with full validation and integrity checks.",
+          },
+          {
+            step: "03",
+            title: "Training & Go-Live",
+            description:
+              "Role-based training for every user, followed by a managed go-live with dedicated support to ensure a smooth transition for your entire team.",
+          },
+          {
+            step: "04",
+            title: "Optimisation & Ongoing Support",
+            description:
+              "Post-launch monitoring, performance tuning, and continuous improvement cycles keep your CRM evolving as your business grows.",
+          },
+        ],
+      },
+      {
+        type: "results",
+        title: "Real Results. Measurable Impact.",
+        subtitle: "What Our Clients Achieve",
+        description:
+          "Our CRM implementations consistently deliver faster adoption, cleaner data, and stronger commercial outcomes — giving our clients a measurable competitive edge within weeks of go-live.",
+        videoUrl: pv(3255438, 24),
+        stats: [
+          { value: "94%", label: "User Adoption Rate" },
+          { value: "3x", label: "Faster Sales Cycle" },
+          { value: "60%", label: "Reduction in Manual Admin" },
+          { value: "200+", label: "Successful Implementations" },
+        ],
+      },
+    ],
+  },
+
+  {
     slug: "media-strategy",
     title: "Media Strategy",
     tagline: "Data-Driven. Results-Focused. Audience-Centered.",
