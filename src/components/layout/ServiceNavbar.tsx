@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
-import { VantageLogo } from "@/components/ui/VantageLogo";
+import logoImg from "@/Assets/Screenshot 2026-03-16 161214.png";
 
 const navLinks = [
   { name: "Home",         href: "/" },
@@ -36,19 +37,13 @@ export default function ServiceNavbar({ accent }: { accent: string }) {
       }}
     >
       {/* ── Logo left ── */}
-      <Link href="/" className="flex items-center gap-3 group shrink-0">
-        <VantageLogo className="w-9 h-9 drop-shadow-lg group-hover:scale-105 transition-transform duration-300" />
-        <div className="leading-none hidden sm:block">
-          <span className="block text-white font-black text-base tracking-[0.15em]">
-            VANTAGE
-          </span>
-          <span
-            className="block text-[9px] tracking-[0.28em] font-semibold -mt-0.5"
-            style={{ color: accent }}
-          >
-            MEDIA CONSULTING
-          </span>
-        </div>
+      <Link href="/" className="shrink-0 group">
+        <Image
+          src={logoImg}
+          alt="Vantage Media Consulting"
+          className="h-10 w-auto drop-shadow-lg group-hover:scale-105 transition-transform duration-300"
+          style={{ objectFit: "contain" }}
+        />
       </Link>
 
       {/* ── Nav links — absolutely centered on the header ── */}

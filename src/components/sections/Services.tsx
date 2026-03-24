@@ -8,11 +8,11 @@ import { FloatingPaths } from "@/components/ui/background-paths";
 
 const services = [
   { icon: Database,    title: "CRM Implementation",  slug: "crm-implementation",  description: "End-to-end CRM setup covering automation, data migration, training, maintenance, analytics, and customisation — everything your team needs under one roof.", accent: "#C9A84C" },
-  { icon: TrendingUp,  title: "Media Strategy",      slug: "media-strategy",      description: "Data-driven media planning across traditional and digital channels, built to maximise reach, engagement, and ROI for your brand.", accent: "#1A6B3C" },
+  { icon: TrendingUp,  title: "Growth Optimization",  slug: "growth-optimization",  description: "Performance-driven growth strategies powered by paid ads, data insights, and full-funnel optimization — designed to bring customers to your business at scale.", accent: "#1A6B3C" },
   { icon: Film,        title: "Media Production",    slug: "media-production",    description: "Premium video, audio, and content production that captivates audiences and communicates your brand story with cinematic impact.", accent: "#C9A84C" },
-  { icon: Palette,     title: "Creative Consulting", slug: "creative-consulting", description: "Innovative creative direction and brand identity development that sets you apart and resonates deeply with your target market.", accent: "#1A6B3C" },
+  { icon: Palette,     title: "Content Creation",    slug: "content-creation",    description: "End-to-end content creation and paid advertising across Google, Facebook, and Instagram — driving real customers to your business through targeted ad campaigns.", accent: "#1A6B3C" },
   { icon: Globe,       title: "Digital Marketing",   slug: "digital-marketing",   description: "Omnichannel digital campaigns — SEO, paid media, social, and content — that connect with your audience and convert at every stage.", accent: "#C9A84C" },
-  { icon: Mic,         title: "Podcast Studio",      slug: "podcasting",          description: "A fully equipped, acoustically treated podcast studio available for rent — professional lighting, velvet lounge seating, and broadcast-quality infrastructure.", accent: "#8B5CF6" },
+  { icon: Mic,         title: "Podcast Studio",      slug: "podcasting",          description: "A fully equipped, acoustically treated podcast studio available for rent — professional lighting, velvet lounge seating, and broadcast-quality infrastructure.", accent: "#1A6B3C" },
 ];
 
 const containerVariants = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };

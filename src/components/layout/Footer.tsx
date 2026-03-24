@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import logoImg from "@/Assets/Screenshot 2026-03-16 161214.png";
 
 const serviceLinks = [
-  { label: "Media Strategy", href: "/services/media-strategy" },
+  { label: "Growth Optimization", href: "/services/growth-optimization" },
   { label: "Brand Analytics", href: "/services/brand-analytics" },
   { label: "Digital Marketing", href: "/services/digital-marketing" },
   { label: "PR & Communications", href: "/services/pr-communications" },
@@ -13,8 +13,18 @@ const serviceLinks = [
 ];
 
 const links = {
-  Company: ["About Us", "Our Team", "Careers", "Case Studies", "Press"],
-  Legal: ["Privacy Policy", "Terms of Service", "Cookie Policy"],
+  Company: [
+    { label: "About Us",     href: "/about" },
+    { label: "Our Team",     href: "/team" },
+    { label: "Careers",      href: "/careers" },
+    { label: "Case Studies", href: "/case-studies" },
+    { label: "Press",        href: "/press" },
+  ],
+  Legal: [
+    { label: "Privacy Policy",   href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms-of-service" },
+    { label: "Cookie Policy",    href: "/cookie-policy" },
+  ],
 };
 
 
@@ -93,10 +103,10 @@ export default function Footer() {
                 {category}
               </h4>
               <ul className="space-y-2.5">
-                {items.map((item) => (
-                  <li key={item}>
-                    <a
-                      href="#"
+                {items.map(({ label, href }) => (
+                  <li key={label}>
+                    <Link
+                      href={href}
                       className="text-sm flex items-center gap-1 group transition-colors duration-200"
                       style={{ color: "#6b7280" }}
                       onMouseEnter={(e) =>
@@ -106,12 +116,12 @@ export default function Footer() {
                         ((e.currentTarget as HTMLElement).style.color = "#6b7280")
                       }
                     >
-                      {item}
+                      {label}
                       <ArrowUpRight
                         size={11}
                         className="opacity-0 group-hover:opacity-100 transition-opacity"
                       />
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

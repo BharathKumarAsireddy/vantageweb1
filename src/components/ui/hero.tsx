@@ -8,12 +8,12 @@ import Image from "next/image";
 import logoImg from "@/Assets/Screenshot 2026-03-16 161214.png";
 
 const services = [
-  { icon: Megaphone, title: "Media Strategy",       slug: "media-strategy",     accent: "#C9A84C" },
+  { icon: Megaphone, title: "Growth Optimization",   slug: "growth-optimization", accent: "#C9A84C" },
   { icon: BarChart3,  title: "Brand Analytics",      slug: "brand-analytics",    accent: "#1A6B3C" },
   { icon: Globe,      title: "Digital Marketing",    slug: "digital-marketing",  accent: "#C9A84C" },
   { icon: Users,      title: "PR & Communications",  slug: "pr-communications",  accent: "#1A6B3C" },
   { icon: Tv,         title: "Media Production",     slug: "media-production",   accent: "#C9A84C" },
-  { icon: PenTool,    title: "Creative Consulting",  slug: "creative-consulting",accent: "#1A6B3C" },
+  { icon: PenTool,    title: "Content Creation",      slug: "content-creation",   accent: "#1A6B3C" },
 ];
 
 const serviceTitles = services.map((s) => s.title);

@@ -161,103 +161,103 @@ export const servicesData: ServiceData[] = [
   },
 
   {
-    slug: "media-strategy",
-    title: "Media Strategy",
-    tagline: "Data-Driven. Results-Focused. Audience-Centered.",
+    slug: "growth-optimization",
+    title: "Growth Optimization",
+    tagline: "Attract. Convert. Scale.",
     heroDescription:
-      "We craft comprehensive media strategies that maximise reach, engagement, and ROI across all channels — traditional and digital.",
+      "We drive measurable business growth through performance marketing, paid advertising, and data-driven strategies that bring real customers to your door.",
     accent: "#C9A84C",
     accentSecondary: "#e8d070",
     heroVideo: pv(3195394),
     sections: [
       {
         type: "overview",
-        title: "Strategic Media Planning That Delivers",
-        subtitle: "Built on Data. Powered by Insight.",
+        title: "Growth Engineered Around Your Business",
+        subtitle: "Performance Marketing That Pays for Itself.",
         description:
-          "Our media strategy service begins with deep audience research and market analysis. We identify your target demographics, understand their media consumption habits, and craft tailored strategies that put your brand in front of the right people at precisely the right moment.\n\nFrom traditional broadcast to cutting-edge digital platforms, we build integrated media plans that create consistent brand experiences across every touchpoint — driving awareness, consideration, and conversion at every stage of the funnel.",
+          "Growth optimization is not about vanity metrics — it's about real customers, real revenue, and sustainable scale. We combine paid advertising, conversion optimization, and data-driven strategy to build a growth engine that consistently brings buyers to your business.\n\nFrom the first ad impression to the final sale, we engineer every step of the customer journey for maximum efficiency — so your marketing budget works harder and your pipeline never runs dry.",
         image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80",
         videoUrl: pv(3044943),
       },
       {
         type: "features",
         title: "What We Offer",
-        subtitle: "Comprehensive Media Strategy Services",
+        subtitle: "Full-Funnel Growth Services",
         description:
-          "From audience insights to campaign execution, we cover every dimension of your media strategy.",
+          "From paid ads to conversion funnels, we cover every lever that drives customer acquisition and revenue growth.",
         videoUrl: pv(2795405),
         features: [
           {
-            title: "Audience Research & Segmentation",
+            title: "Google Ads & Search Marketing",
             description:
-              "Deep behavioural analysis to identify and segment your ideal audiences, ensuring every media dollar reaches the people most likely to convert.",
+              "Capture high-intent buyers the moment they search for your products or services. We manage keyword strategy, bid optimisation, ad copy, and landing pages to deliver the lowest cost-per-acquisition on Google Search, Display, and Shopping.",
             image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
           },
           {
-            title: "Channel Mix Optimisation",
+            title: "Facebook & Instagram Advertising",
             description:
-              "We identify the optimal blend of media channels — TV, radio, digital, OOH, and social — to achieve maximum reach and frequency for your budget.",
+              "Reach your ideal customers on Meta's platforms with precision-targeted campaigns. We handle audience building, creative strategy, A/B testing, and retargeting across Facebook and Instagram to drive leads, sales, and brand growth.",
             image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80",
           },
           {
-            title: "Budget Allocation & Planning",
+            title: "Conversion Rate Optimisation",
             description:
-              "Precision budget allocation based on historical performance data, market trends, and competitive analysis to maximise your media investment ROI.",
+              "Getting traffic is only half the battle. We optimise landing pages, sales funnels, and user journeys to ensure your ad spend converts into paying customers — reducing acquisition costs and increasing revenue per visit.",
             image: "https://images.unsplash.com/photo-1552581234-26160f608093?w=600&q=80",
           },
           {
-            title: "Performance Measurement",
+            title: "Growth Analytics & Reporting",
             description:
-              "Comprehensive KPI frameworks and real-time dashboards to track campaign performance and make data-driven optimisations on the fly.",
+              "Real-time dashboards and custom KPI frameworks that track what actually matters — cost per lead, ROAS, customer acquisition cost, and revenue attribution — so you always know exactly where your budget is performing.",
             image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
           },
         ],
       },
       {
         type: "process",
-        title: "Our Strategic Process",
-        subtitle: "A Proven Framework for Media Success",
+        title: "Our Growth Process",
+        subtitle: "A Proven Framework for Scalable Results",
         description:
-          "Our four-phase process ensures every media strategy is grounded in data, aligned with your goals, and built for measurable success.",
+          "Our four-phase process launches your growth campaigns fast, validates what works, and scales aggressively — eliminating waste and maximising every pound spent.",
         videoUrl: pv(3209828, 25),
         processSteps: [
           {
             step: "01",
-            title: "Discovery & Audit",
+            title: "Audience & Market Research",
             description:
-              "We audit your existing media presence, analyse competitors, and identify gaps and opportunities in your current strategy.",
+              "We define your ideal customer profile, analyse competitor ad strategies, and identify the highest-opportunity channels and audiences for your business.",
           },
           {
             step: "02",
-            title: "Strategy Development",
+            title: "Campaign Build & Launch",
             description:
-              "Our strategists craft a tailored media plan with clear objectives, channel recommendations, and budget frameworks.",
+              "We build your Google, Facebook, and Instagram campaigns from the ground up — audiences, creatives, copy, tracking, and bidding strategies all configured for day-one performance.",
           },
           {
             step: "03",
-            title: "Campaign Activation",
+            title: "Test, Learn & Optimise",
             description:
-              "We execute across selected channels, managing placements, negotiations, and creative delivery with precision.",
+              "Continuous A/B testing of creatives, audiences, and landing pages to find the combinations that drive the lowest cost-per-customer and highest return on ad spend.",
           },
           {
             step: "04",
-            title: "Optimisation & Reporting",
+            title: "Scale & Report",
             description:
-              "Continuous performance monitoring with regular reporting and data-driven optimisations to improve results over time.",
+              "Once we find what works, we scale aggressively. Weekly performance reports keep you fully informed on spend, results, and what's driving your growth.",
           },
         ],
       },
       {
         type: "results",
-        title: "Proven Results",
+        title: "Growth That's Measurable",
         subtitle: "Numbers That Speak for Themselves",
         description:
-          "Our media strategies have delivered exceptional outcomes for clients across industries, consistently outperforming benchmarks and driving sustainable growth.",
+          "Our growth optimization campaigns have helped businesses across industries acquire more customers, lower their cost-per-acquisition, and build sustainable revenue pipelines.",
         videoUrl: pv(3255438, 24),
         stats: [
-          { value: "340%", label: "Average ROI Increase" },
-          { value: "12M+", label: "Audience Reach" },
-          { value: "280%", label: "Brand Recognition Growth" },
+          { value: "4.8x", label: "Average Return on Ad Spend" },
+          { value: "60%", label: "Reduction in Cost Per Lead" },
+          { value: "300%", label: "Average Revenue Growth" },
           { value: "98%", label: "Client Retention Rate" },
         ],
       },
@@ -690,104 +690,104 @@ export const servicesData: ServiceData[] = [
   },
 
   {
-    slug: "creative-consulting",
-    title: "Creative Consulting",
-    tagline: "Distinctive. Memorable. Transformative.",
+    slug: "content-creation",
+    title: "Content Creation",
+    tagline: "Create. Advertise. Grow.",
     heroDescription:
-      "Innovative creative direction and brand identity development that sets you apart and resonates with your target market.",
+      "We create compelling content and run targeted paid ad campaigns across Google, Facebook, and Instagram to bring real customers to your business.",
     accent: "#1A6B3C",
     accentSecondary: "#25A047",
     heroVideo: pv(3045925, 25),
     sections: [
       {
         type: "overview",
-        title: "Creative Thinking That Transforms Brands",
-        subtitle: "Where Strategy Meets Imagination.",
+        title: "Content That Attracts. Ads That Convert.",
+        subtitle: "From Creative to Customer.",
         description:
-          "Great brands are built on great ideas. Our creative consulting team brings together strategic thinking and imaginative execution to help you build a brand identity that is distinctive, consistent, and deeply resonant with your audience.\n\nWhether you're launching a new brand, repositioning an existing one, or evolving your creative platform, we bring the insight, craft, and courage to create work that truly makes a difference.",
+          "Great content without distribution is invisible — and ads without great content are expensive. We combine both: high-impact creative production with precision-targeted paid advertising on Google, Facebook, and Instagram to build a customer acquisition engine that delivers measurable results.\n\nWhether you need scroll-stopping social content, compelling video ads, or full-funnel paid campaigns, we handle everything from concept through to customer — so you can focus on running your business while we fill your pipeline.",
         image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80",
         videoUrl: pv(4271668),
       },
       {
         type: "features",
-        title: "Creative Services",
-        subtitle: "Full-Spectrum Creative Solutions",
+        title: "Our Services",
+        subtitle: "Content Creation & Paid Advertising",
         description:
-          "From brand strategy to visual design, we offer the complete range of creative consulting services.",
+          "From ad creative to campaign management, we deliver the full stack of content and paid media services that bring customers to your business.",
         videoUrl: pv(3255438, 24),
         features: [
           {
-            title: "Brand Identity Design",
+            title: "Google Ads Campaigns",
             description:
-              "Create a distinctive, ownable visual identity — logo, colour, typography, imagery — that consistently communicates your brand's values and personality.",
+              "We build and manage high-performing Google Search, Display, and Shopping campaigns that put your business in front of customers actively looking for what you offer — maximising clicks, leads, and sales at the lowest possible cost per acquisition.",
             image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80",
           },
           {
-            title: "Creative Direction",
+            title: "Facebook Advertising",
             description:
-              "Visionary creative leadership that ensures brand consistency and creative excellence across every touchpoint, campaign, and communication.",
+              "Precision-targeted Facebook ad campaigns built around your ideal customer profile. From awareness campaigns to direct-response lead generation, we manage creative, audiences, bidding, and retargeting to deliver consistent, scalable results.",
             image: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=600&q=80",
           },
           {
-            title: "Campaign Concept Development",
+            title: "Instagram Advertising",
             description:
-              "Big-idea thinking that generates breakthrough campaign concepts with the strategic insight to make them commercially effective.",
+              "Visually compelling Instagram ad campaigns — Stories, Reels, and Feed — crafted to stop the scroll and drive action. We combine platform-native creative formats with smart audience targeting to grow your following, generate leads, and increase sales.",
             image: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&q=80",
           },
           {
-            title: "Brand Guidelines & Systems",
+            title: "Ad Creative & Content Production",
             description:
-              "Comprehensive brand guidelines that ensure your team and agency partners deliver consistent, on-brand creative across every channel and touchpoint.",
+              "Eye-catching graphics, short-form videos, ad copy, and landing page content produced in-house and optimised for paid platforms. Every asset is designed to perform — not just look good — with clear calls-to-action that drive customers to convert.",
             image: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=600&q=80",
           },
         ],
       },
       {
         type: "process",
-        title: "Our Creative Process",
-        subtitle: "Structured Creativity",
+        title: "How We Work",
+        subtitle: "From Brief to Booked Customers",
         description:
-          "We believe great creative work emerges from a disciplined process that balances strategic rigour with imaginative freedom.",
+          "Our process is built for speed and performance — getting your campaigns live fast and continuously improving them until your customer acquisition cost is where it needs to be.",
         videoUrl: pv(3195394),
         processSteps: [
           {
             step: "01",
-            title: "Strategic Insight",
+            title: "Business & Audience Discovery",
             description:
-              "Deep brand strategy work — positioning, personality, purpose — that gives us the strategic foundation for all creative development.",
+              "We deep-dive into your business, your customers, and your competitors to define the ideal target audience and the key messages that will make them act.",
           },
           {
             step: "02",
-            title: "Creative Exploration",
+            title: "Creative & Campaign Build",
             description:
-              "Wide-ranging creative exploration across multiple territories and directions, grounded in the strategic brief but free to explore.",
+              "We produce your ad creative — copy, images, video — and build your Google, Facebook, and Instagram campaigns with full tracking and conversion measurement in place.",
           },
           {
             step: "03",
-            title: "Concept Refinement",
+            title: "Launch & Optimise",
             description:
-              "Rigorous refinement of the most promising creative directions, tested against strategic objectives and audience insights.",
+              "Campaigns go live and we immediately begin testing and optimising — audiences, creatives, bids, and landing pages — to drive down costs and ramp up results.",
           },
           {
             step: "04",
-            title: "Brand System Build",
+            title: "Scale & Report",
             description:
-              "Development of the complete brand system — all assets, guidelines, and tools — needed to bring the new creative to life at scale.",
+              "We scale winning campaigns and cut what isn't working, with weekly performance reports keeping you fully informed on spend, leads, and customer acquisition.",
           },
         ],
       },
       {
         type: "results",
-        title: "Creative That Creates Value",
-        subtitle: "Brand Impact. Business Results.",
+        title: "Content That Drives Business",
+        subtitle: "Real Customers. Measurable Results.",
         description:
-          "Our creative consulting work has helped brands achieve significant commercial results, from improved brand recognition to increased customer acquisition and retention.",
+          "Our content creation and paid advertising campaigns have helped businesses across industries grow their customer base, reduce acquisition costs, and build sustainable revenue.",
         videoUrl: pv(3044943),
         stats: [
-          { value: "65%", label: "Average Brand Recognition Increase" },
-          { value: "40%", label: "Improvement in Brand Preference" },
-          { value: "3x", label: "Higher Creative Engagement" },
-          { value: "100+", label: "Brands Transformed" },
+          { value: "5x", label: "Average Return on Ad Spend" },
+          { value: "55%", label: "Lower Cost Per Customer" },
+          { value: "400%", label: "Average Lead Volume Increase" },
+          { value: "100+", label: "Businesses Grown" },
         ],
       },
     ],
@@ -798,8 +798,8 @@ export const servicesData: ServiceData[] = [
     tagline: "Record. Create. Amplify Your Voice.",
     heroDescription:
       "Step into a professional, acoustically engineered podcast studio available for rent — designed for creators, brands, and storytellers who refuse to settle for anything less than broadcast quality.",
-    accent: "#8B5CF6",
-    accentSecondary: "#C4B5FD",
+    accent: "#1A6B3C",
+    accentSecondary: "#25A047",
     heroVideo: pv(3044943),
     sections: [
       {

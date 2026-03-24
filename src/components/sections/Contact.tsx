@@ -1,7 +1,8 @@
 "use client";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Mail, Phone, MapPin, Send, ArrowRight, Navigation } from "lucide-react";
+import Script from "next/script";
+import { Mail, Phone, MapPin, ArrowRight, Navigation } from "lucide-react";
 
 const CONTACT_INFO = [
   {
@@ -48,16 +49,6 @@ export default function Contact() {
   const mapRef = useRef(null);
   const inView    = useInView(ref,    { once: true, margin: "-100px" });
   const mapInView = useInView(mapRef, { once: true, margin: "-80px" });
-
-  const [form, setForm]     = useState({ name: "", email: "", company: "", message: "" });
-  const [status, setStatus] = useState<"idle" | "loading" | "sent">("idle");
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("loading");
-    await new Promise((r) => setTimeout(r, 1500));
-    setStatus("sent");
-  };
 
   return (
     <section id="contact" className="relative flex flex-col overflow-hidden" style={{ background: "#1a1a1a" }}>
@@ -227,116 +218,39 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* ── RIGHT: Contact form ── */}
+          {/* ── RIGHT: GHL Embedded Form ── */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.15 }}
           >
             <div
-              className="rounded-3xl p-6 sm:p-8"
+              className="rounded-3xl overflow-hidden"
               style={{
                 background: "rgba(255,255,255,0.02)",
                 border: "1px solid rgba(201,168,76,0.10)",
+                minHeight: 560,
               }}
             >
-              {status === "sent" ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="flex flex-col items-center justify-center py-12 text-center"
-                >
-                  <div
-                    className="w-14 h-14 rounded-full flex items-center justify-center mb-4 text-xl font-bold"
-                    style={{
-                      background: "rgba(26,107,60,0.12)",
-                      border: "1px solid rgba(26,107,60,0.35)",
-                      color: "#1A6B3C",
-                    }}
-                  >
-                    ✓
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-2">Message Sent!</h3>
-                  <p className="text-sm" style={{ color: "#9ca3af" }}>We&apos;ll be in touch within 24 hours.</p>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    {[
-                      { name: "name",  label: "First Name",    placeholder: "John Smith",       type: "text"  },
-                      { name: "email", label: "Email Address", placeholder: "john@company.com", type: "email" },
-                    ].map((field) => (
-                      <div key={field.name}>
-                        <label className="block text-xs font-semibold tracking-wide mb-2" style={{ color: "#6b7280" }}>
-                          {field.label} <span style={{ color: "#C9A84C" }}>*</span>
-                        </label>
-                        <input
-                          type={field.type}
-                          required
-                          placeholder={field.placeholder}
-                          value={form[field.name as keyof typeof form]}
-                          onChange={(e) => setForm({ ...form, [field.name]: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl text-white text-sm outline-none transition-all"
-                          style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(201,168,76,0.12)" }}
-                          onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(201,168,76,0.45)")}
-                          onBlur={(e)  => (e.currentTarget.style.borderColor = "rgba(201,168,76,0.12)")}
-                        />
-                      </div>
-                    ))}
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold tracking-wide mb-2" style={{ color: "#6b7280" }}>
-                      Company Name <span style={{ color: "#C9A84C" }}>*</span>
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Your Company"
-                      value={form.company}
-                      onChange={(e) => setForm({ ...form, company: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl text-white text-sm outline-none transition-all"
-                      style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(201,168,76,0.12)" }}
-                      onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(201,168,76,0.45)")}
-                      onBlur={(e)  => (e.currentTarget.style.borderColor = "rgba(201,168,76,0.12)")}
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold tracking-wide mb-2" style={{ color: "#6b7280" }}>Message</label>
-                    <textarea
-                      required
-                      rows={4}
-                      placeholder="Tell us about your project and goals..."
-                      value={form.message}
-                      onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl text-white text-sm outline-none transition-all resize-none"
-                      style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(201,168,76,0.12)" }}
-                      onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(201,168,76,0.45)")}
-                      onBlur={(e)  => (e.currentTarget.style.borderColor = "rgba(201,168,76,0.12)")}
-                    />
-                  </div>
-
-                  <motion.button
-                    type="submit"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.97 }}
-                    disabled={status === "loading"}
-                    className="w-full py-4 rounded-xl font-bold text-black flex items-center justify-center gap-2 transition-all duration-200 disabled:opacity-70"
-                    style={{
-                      background: "linear-gradient(135deg, #C9A84C 0%, #e8d070 100%)",
-                      boxShadow: "0 4px 24px rgba(201,168,76,0.20)",
-                    }}
-                  >
-                    {status === "loading" ? (
-                      <div className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin" />
-                    ) : (
-                      <>Send Message <Send size={16} /></>
-                    )}
-                  </motion.button>
-                </form>
-              )}
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/z7bM6nWe6wNYGiTZ8BKW"
+                style={{ width: "100%", height: "560px", border: "none", borderRadius: "1.5rem" }}
+                id="inline-z7bM6nWe6wNYGiTZ8BKW"
+                data-layout='{"id":"INLINE"}'
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Website form"
+                data-height="544"
+                data-layout-iframe-id="inline-z7bM6nWe6wNYGiTZ8BKW"
+                data-form-id="z7bM6nWe6wNYGiTZ8BKW"
+                title="Website form"
+              />
             </div>
+            <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="lazyOnload" />
           </motion.div>
 
         </div>
