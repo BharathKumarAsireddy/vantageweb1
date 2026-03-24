@@ -25,7 +25,7 @@ function VideoBg({
 }) {
   const needsRotate = rotate !== 0;
   return (
-    <div className="absolute inset-0 overflow-hidden" style={{ background: fallback }}>
+    <div className="absolute inset-0 overflow-hidden" style={{ background: fallback, width: "100%", height: "100%" }}>
       <video
         autoPlay
         loop
@@ -37,10 +37,8 @@ function VideoBg({
           ...(needsRotate && {
             top: "50%",
             left: "50%",
-            width: "100vh",
-            height: "100vw",
-            minWidth: "100%",
-            minHeight: "100%",
+            width: "300vh",
+            height: "300vw",
             objectFit: "cover",
             transform: `translate(-50%, -50%) rotate(${rotate}deg) translateY(${shift}%)`,
           }),
@@ -463,6 +461,135 @@ function PodcastSection({
   );
 }
 
+/* ─── Gallery section ───────────────────────────────────────────────────────── */
+function GallerySection({
+  section,
+  accent,
+  accentSecondary,
+}: {
+  section: ServiceSection;
+  accent: string;
+  accentSecondary: string;
+}) {
+  const images = section.images ?? [];
+  return (
+    <section className="relative py-24 lg:py-32 overflow-hidden">
+      <div
+        className="absolute inset-0"
+        style={{ background: "linear-gradient(135deg, #0d0d10 0%, #1a1a1a 100%)" }}
+      />
+      {/* Subtle radial glow */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `radial-gradient(ellipse at 50% 0%, ${accent}12 0%, transparent 60%)`,
+        }}
+      />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <FadeIn className="text-center mb-16">
+          <SectionLabel text={section.subtitle} accent={accent} />
+          <GradientHeading accent={accent} accentSecondary={accentSecondary}>
+            {section.title}
+          </GradientHeading>
+          <p className="max-w-2xl mx-auto text-base" style={{ color: "#9ca3af" }}>
+            {section.description}
+          </p>
+        </FadeIn>
+
+        {/* Masonry-style grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+          {/* Hero image — spans 2 cols & 2 rows */}
+          {images[0] && (
+            <FadeIn className="col-span-2 row-span-2">
+              <div
+                className="relative rounded-2xl overflow-hidden h-full min-h-[320px] border group"
+                style={{ borderColor: `${accent}25` }}
+              >
+                <img
+                  src={images[0]}
+                  alt="Podcast studio — main view"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{
+                    background: `linear-gradient(135deg, ${accent}20 0%, transparent 60%)`,
+                  }}
+                />
+                <div
+                  className="absolute bottom-0 left-0 right-0 h-0.5"
+                  style={{ background: `linear-gradient(to right, ${accent}80, transparent)` }}
+                />
+              </div>
+            </FadeIn>
+          )}
+
+          {/* Remaining images */}
+          {images.slice(1).map((img, i) => (
+            <FadeIn key={i} delay={i * 0.08}>
+              <div
+                className="relative rounded-2xl overflow-hidden h-[220px] border group"
+                style={{ borderColor: `${accent}20` }}
+              >
+                <img
+                  src={img}
+                  alt={`Podcast studio — view ${i + 2}`}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{
+                    background: `linear-gradient(135deg, ${accent}18 0%, transparent 60%)`,
+                  }}
+                />
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+
+        {/* Rent CTA banner */}
+        <FadeIn delay={0.3}>
+          <div
+            className="mt-14 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 border"
+            style={{
+              background: `linear-gradient(135deg, ${accent}0e 0%, rgba(9,9,11,0.6) 100%)`,
+              borderColor: `${accent}30`,
+            }}
+          >
+            <div>
+              <p
+                className="text-xs font-bold tracking-[0.3em] uppercase mb-2"
+                style={{ color: accent }}
+              >
+                Available for Rent
+              </p>
+              <h3 className="text-2xl md:text-3xl font-black text-white mb-2">
+                Book the Studio for Your Next Project
+              </h3>
+              <p className="text-sm" style={{ color: "#9ca3af" }}>
+                Hourly, half-day, and full-day rates available. Production support optional.
+              </p>
+            </div>
+            <Link href="/#contact" className="shrink-0">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.96 }}
+                className="px-8 py-4 rounded-full font-bold text-white whitespace-nowrap"
+                style={{
+                  background: `linear-gradient(135deg, ${accent} 0%, ${accentSecondary} 100%)`,
+                  boxShadow: `0 4px 28px ${accent}40`,
+                }}
+              >
+                Enquire About Booking
+              </motion.button>
+            </Link>
+          </div>
+        </FadeIn>
+      </div>
+    </section>
+  );
+}
+
 /* ─── Results section ───────────────────────────────────────────────────────── */
 function ResultsSection({
   section,
@@ -611,7 +738,7 @@ export default function ServicePageContent({ service }: { service: ServiceData }
   return (
     <div className="bg-[#1a1a1a] min-h-screen">
       {/* ── Hero ── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative flex items-center overflow-hidden" style={{ height: "100vh", width: "100vw" }}>
         <VideoBg
           url={service.heroVideo}
           fallback="#ffffff"
@@ -637,7 +764,7 @@ export default function ServicePageContent({ service }: { service: ServiceData }
           }}
         />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
           {/* Back link */}
           <motion.div
             initial={{ opacity: 0, x: -16 }}
@@ -798,6 +925,15 @@ export default function ServicePageContent({ service }: { service: ServiceData }
           if (section.type === "podcast")
             return (
               <PodcastSection
+                key={section.type}
+                section={section}
+                accent={accent}
+                accentSecondary={accentSecondary}
+              />
+            );
+          if (section.type === "gallery")
+            return (
+              <GallerySection
                 key={section.type}
                 section={section}
                 accent={accent}

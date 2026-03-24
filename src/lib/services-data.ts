@@ -16,13 +16,14 @@ export interface ServiceStat {
 }
 
 export interface ServiceSection {
-  type: "overview" | "features" | "process" | "results" | "podcast";
+  type: "overview" | "features" | "process" | "results" | "podcast" | "gallery";
   title: string;
   subtitle: string;
   description: string;
   videoUrl: string;
   featuredVideoUrl?: string;
   image?: string;
+  images?: string[];
   features?: ServiceFeatureItem[];
   processSteps?: ProcessStep[];
   stats?: ServiceStat[];
@@ -671,6 +672,126 @@ export const servicesData: ServiceData[] = [
           { value: "40%", label: "Improvement in Brand Preference" },
           { value: "3x", label: "Higher Creative Engagement" },
           { value: "100+", label: "Brands Transformed" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "podcasting",
+    title: "Podcast Studio",
+    tagline: "Record. Create. Amplify Your Voice.",
+    heroDescription:
+      "Step into a professional, acoustically engineered podcast studio available for rent — designed for creators, brands, and storytellers who refuse to settle for anything less than broadcast quality.",
+    accent: "#8B5CF6",
+    accentSecondary: "#C4B5FD",
+    heroVideo: pv(3044943),
+    sections: [
+      {
+        type: "overview",
+        title: "A Studio Built for Creators Who Mean Business",
+        subtitle: "Professional. Atmospheric. Yours to Book.",
+        description:
+          "Our podcast studio is more than a room — it's a curated creative environment engineered to inspire great conversations and capture them in pristine quality. From the acoustically treated ceiling panels to the ambient purple mood lighting, every detail has been designed with your production in mind.\n\nWhether you're launching a brand podcast, recording interviews, filming video content, or hosting live streams, our studio gives you the professional backdrop and technical infrastructure to produce content that commands attention.",
+        image: "/podcast/podcast-room-4.jpg",
+        videoUrl: pv(3195394),
+      },
+      {
+        type: "gallery",
+        title: "Inside the Studio",
+        subtitle: "See the Space",
+        description:
+          "A purpose-built content studio where every corner is camera-ready. Explore the space that will become your creative home.",
+        videoUrl: pv(3044943),
+        images: [
+          "/podcast/podcast-room-1.jpg",
+          "/podcast/podcast-room-2.jpg",
+          "/podcast/podcast-room-3.jpg",
+          "/podcast/podcast-room-4.jpg",
+          "/podcast/podcast-room-5.jpg",
+          "/podcast/podcast-room-6.jpg",
+          "/podcast/podcast-room-7.jpg",
+        ],
+      },
+      {
+        type: "features",
+        title: "Everything You Need to Create",
+        subtitle: "Studio Features & Equipment",
+        description:
+          "The studio is fully equipped and ready to record — so you can focus entirely on your content.",
+        videoUrl: pv(2795405),
+        features: [
+          {
+            title: "Professional Acoustic Treatment",
+            description:
+              "Ceiling and wall acoustic foam panels eliminate echo and unwanted background noise, delivering clean, broadcast-quality audio from the moment you hit record.",
+            image: "/podcast/podcast-room-5.jpg",
+          },
+          {
+            title: "Cinematic Studio Lighting",
+            description:
+              "Multiple professional softbox lights and LED panels give you full control over your visual environment — from warm interview tones to dramatic atmospheric setups.",
+            image: "/podcast/podcast-room-1.jpg",
+          },
+          {
+            title: "Luxury Lounge Seating",
+            description:
+              "Velvet teal lounge chairs and a stylish geometric coffee table create a relaxed, premium aesthetic that makes guests feel comfortable and cameras love.",
+            image: "/podcast/podcast-room-6.jpg",
+          },
+          {
+            title: "Atmospheric Mood Design",
+            description:
+              "Purple accent lighting, lush tropical palms, and a warm wood slat feature wall create a one-of-a-kind visual signature that makes your content instantly recognisable.",
+            image: "/podcast/podcast-room-3.jpg",
+          },
+        ],
+      },
+      {
+        type: "process",
+        title: "Book the Studio in 4 Simple Steps",
+        subtitle: "From Inquiry to On-Air",
+        description:
+          "We've made the booking process as smooth as possible so you can spend less time on logistics and more time creating.",
+        videoUrl: pv(3209828, 25),
+        processSteps: [
+          {
+            step: "01",
+            title: "Enquire & Choose Your Slot",
+            description:
+              "Reach out via our contact page or call us directly. Tell us your dates, session length, and the type of content you're producing.",
+          },
+          {
+            step: "02",
+            title: "Confirm & Pay",
+            description:
+              "We'll send you a booking confirmation and invoice. Sessions can be booked by the hour, half-day, or full day — with flexible packages available.",
+          },
+          {
+            step: "03",
+            title: "Arrive & Set Up",
+            description:
+              "Arrive at your scheduled time and find the studio fully set up and ready. Our team will walk you through the equipment and lighting options.",
+          },
+          {
+            step: "04",
+            title: "Record & Deliver",
+            description:
+              "Record your content in a world-class environment. We can also provide post-production support — editing, colour grading, and audio mixing — so your content is publish-ready.",
+          },
+        ],
+      },
+      {
+        type: "results",
+        title: "The Studio, By the Numbers",
+        subtitle: "Built for Professional Production",
+        description:
+          "Our podcast studio is engineered to the same standards used by leading broadcasters and content agencies — giving independent creators and brands access to professional-grade infrastructure at accessible rates.",
+        videoUrl: pv(3255438, 24),
+        stats: [
+          { value: "4K", label: "Video Recording Ready" },
+          { value: "100%", label: "Acoustically Treated" },
+          { value: "360°", label: "Camera-Ready Angles" },
+          { value: "1-Day", label: "Fastest Booking Turnaround" },
         ],
       },
     ],

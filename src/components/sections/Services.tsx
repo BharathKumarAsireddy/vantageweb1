@@ -1,7 +1,7 @@
 "use client";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Database, RefreshCw, Plug, GraduationCap, BarChart3, Settings, ArrowRight } from "lucide-react";
+import { Database, RefreshCw, Plug, GraduationCap, BarChart3, Settings, ArrowRight, Mic } from "lucide-react";
 import Link from "next/link";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { FloatingPaths } from "@/components/ui/background-paths";
@@ -14,6 +14,7 @@ const services = [
   { icon: BarChart3, title: "CRM Analytics & Reporting", slug: "crm-analytics", description: "Custom dashboards and reports that surface real-time insights from your CRM data to drive smarter business decisions.", accent: "#C9A84C" },
   { icon: Settings, title: "CRM Customization", slug: "crm-customization", description: "Tailor your CRM with custom fields, modules, workflows, and UI adjustments to perfectly fit your unique business processes.", accent: "#1A6B3C" },
   { icon: RefreshCw, title: "CRM Maintenance", slug: "crm-maintenance", description: "Ongoing monitoring, health checks, performance tuning, and proactive fixes to keep your CRM running at peak efficiency 24/7.", accent: "#C9A84C" },
+  { icon: Mic, title: "Podcast Studio", slug: "podcasting", description: "A fully equipped, acoustically treated podcast studio available for rent — professional lighting, velvet lounge seating, and broadcast-quality infrastructure for creators and brands.", accent: "#8B5CF6" },
 ];
 
 const containerVariants = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
