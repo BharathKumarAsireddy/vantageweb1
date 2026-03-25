@@ -584,7 +584,7 @@ export const servicesData: ServiceData[] = [
       "Premium video, audio, and content production that captivates audiences and communicates your brand story with impact.",
     accent: "#C9A84C",
     accentSecondary: "#e8d070",
-    heroVideo: "/media-production-bg.mov",
+    heroVideo: pv(3195394),
     sections: [
       {
         type: "overview",

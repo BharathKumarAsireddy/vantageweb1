@@ -40,7 +40,7 @@ export const PremiumHero = () => {
         loop
         playsInline
         className="absolute inset-0 z-0 w-full h-full object-cover"
-        src="/hero-bg.mov"
+        src="/myvideo_compressed.mp4"
       />
 
       {/* Dark overlay — keeps text readable over the video */}

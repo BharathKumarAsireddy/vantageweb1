@@ -7,6 +7,8 @@ import Image from "next/image";
 import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
 import type { ServiceData, ServiceSection } from "@/lib/services-data";
 
+const mediaProductionVideo = "/myv.mp4";
+
 /* ─── Video background helper ──────────────────────────────────────────────── */
 function VideoBg({
   url,
@@ -734,18 +736,19 @@ function CTASection({
 /* ─── Main export ───────────────────────────────────────────────────────────── */
 export default function ServicePageContent({ service }: { service: ServiceData }) {
   const { accent, accentSecondary } = service;
+  const heroVideoUrl = service.slug === "media-production" ? mediaProductionVideo : service.heroVideo;
 
   return (
     <div className="bg-[#1a1a1a] min-h-screen">
       {/* ── Hero ── */}
       <section className="relative flex items-center overflow-hidden" style={{ height: "100vh", width: "100vw" }}>
         <VideoBg
-          url={service.heroVideo}
+          url={heroVideoUrl}
           fallback="#ffffff"
           opacity={100}
           overlayOpacity={0.22}
-          rotate={service.heroVideo.endsWith(".mov") ? -90 : 0}
-          shift={service.heroVideo.endsWith(".mov") ? 30 : 0}
+          rotate={0}
+          shift={0}
         />
 
         {/* Radial glow */}
@@ -926,7 +929,11 @@ export default function ServicePageContent({ service }: { service: ServiceData }
             return (
               <PodcastSection
                 key={section.type}
-                section={section}
+                section={
+                  service.slug === "media-production"
+                    ? { ...section, featuredVideoUrl: mediaProductionVideo }
+                    : section
+                }
                 accent={accent}
                 accentSecondary={accentSecondary}
               />
@@ -948,7 +955,7 @@ export default function ServicePageContent({ service }: { service: ServiceData }
       <CTASection
         accent={accent}
         accentSecondary={accentSecondary}
-        heroVideo={service.heroVideo}
+        heroVideo={heroVideoUrl}
       />
     </div>
   );
