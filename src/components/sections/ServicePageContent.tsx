@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -26,13 +26,21 @@ function VideoBg({
   shift?: number;
 }) {
   const needsRotate = rotate !== 0;
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    videoRef.current?.play().catch(() => {});
+  }, []);
+
   return (
     <div className="absolute inset-0 overflow-hidden" style={{ background: fallback, width: "100%", height: "100%" }}>
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
+        preload="auto"
         className={needsRotate ? "absolute" : "absolute inset-0 w-full h-full object-cover"}
         style={{
           opacity: opacity / 100,

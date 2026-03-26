@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import { ArrowRight, Megaphone, BarChart3, Globe, Users, Tv, PenTool } from "lucide-react";
 import Link from "next/link";
@@ -20,12 +20,17 @@ const serviceTitles = services.map((s) => s.title);
 
 export const PremiumHero = () => {
   const [titleNumber, setTitleNumber] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setTitleNumber((prev) => (prev + 1) % serviceTitles.length);
     }, 2500);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    videoRef.current?.play().catch(() => {});
   }, []);
 
   const scrollTo = (id: string) =>
@@ -35,10 +40,12 @@ export const PremiumHero = () => {
     <section id="home" className="relative w-full min-h-screen overflow-hidden">
       {/* ── Background video ──────────────────────────────────────────────── */}
       <video
+        ref={videoRef}
         autoPlay
         muted
         loop
         playsInline
+        preload="auto"
         className="absolute inset-0 z-0 w-full h-full object-cover"
         src="/myvideo_compressed.mp4"
       />
